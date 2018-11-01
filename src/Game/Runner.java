@@ -4,6 +4,7 @@ import People.Person;
 import Rooms.Room;
 import Rooms.KevinsRoom;
 import Rooms.TrapRoom;
+import Rooms.JackiesRoom;
 
 import java.util.Scanner;
 
@@ -14,7 +15,7 @@ public class Runner {
 	
 	public static void main(String[] args)
 	{
-		Room[][] building = new Room[5][5];
+		Room[][] building = new Room[10][10];
 		
 		//Fill the building with normal rooms
 		for (int x = 0; x<building.length; x++)
@@ -32,6 +33,9 @@ public class Runner {
 		int x1 = (int)(Math.random()*building.length);
 		int y1 = (int)(Math.random()*building.length);
 		building[x1][y1] = new KevinsRoom(x1, y1);
+		int x2 = (int)(Math.random()*building.length);
+		int y2 = (int)(Math.random()*building.length);
+		building[x1][y1] = new JackiesRoom(x2, y2);
 		 
 		 //Setup player 1 and the input scanner
 		Person player1 = new Person("FirstName", "FamilyName", 0,0);

@@ -33,9 +33,9 @@ public class Board {
 
         int x = (int)(Math.random()*building.length);
         int y = (int)(Math.random()*building.length);
-        building[9][9] = new WinningRoom(x,y);
+        Room[][] sizeRoom = new Room[10][10];
 
-        return building;
+        return sizeRoom;
     }
     public static void createTemplate()
     {
