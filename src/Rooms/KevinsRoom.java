@@ -21,7 +21,7 @@ public class KevinsRoom extends Room
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
-        System.out.println("There was a zombie in this room! You lose 10 health");
+        System.out.println("Kevin farted in the room! You lose 20 health");
     }
 
 
