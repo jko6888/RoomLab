@@ -6,6 +6,7 @@ import Rooms.KevinsRoom;
 import Rooms.TrapRoom;
 import Rooms.JackiesRoom;
 import Rooms.AzarulsRoom;
+import Rooms.EdmundsRoom;
 
 import java.util.Scanner;
 
@@ -16,6 +17,7 @@ public class Runner {
 	
 	public static void main(String[] args)
 	{
+		Scanner in = new Scanner(System.in);
 		Room[][] building = new Room[10][10];
 		
 		//Fill the building with normal rooms
@@ -26,6 +28,13 @@ public class Runner {
 				building[x][y] = new Room(x,y);
 			}
 		}
+		System.out.println("First thing is first, What's your name?");
+		String firstName = in.nextLine();
+		System.out.println("Last name?");
+		String lastName = in.nextLine();
+		Person player1 = new Person(firstName, lastName, 0,0);
+		System.out.println("Well, good luck, " + firstName + " " + lastName + ". If you have need help, type help");
+		building[0][0].enterRoom(player1);
 		
 		//Create a random winning room.
 		int x = (int)(Math.random()*building.length);
@@ -36,15 +45,15 @@ public class Runner {
 		building[x1][y1] = new KevinsRoom(x1, y1);
 		int x2 = (int)(Math.random()*building.length);
 		int y2 = (int)(Math.random()*building.length);
-		building[x1][y1] = new JackiesRoom(x2, y2);
+		building[x2][y2] = new JackiesRoom(x2, y2);
 		int x3 = (int)(Math.random()*building.length);
 		int y3 = (int)(Math.random()*building.length);
-		building[x1][y1] = new AzarulsRoom(x3, y3);
+		building[x3][y3] = new AzarulsRoom(x3, y3);
+		int x4 = (int)(Math.random()*building.length);
+		int y4 = (int)(Math.random()*building.length);
+		building[x4][y4] = new EdmundsRoom(x4, y4);
 		 
 		 //Setup player 1 and the input scanner
-		Person player1 = new Person("FirstName", "FamilyName", 0,0);
-		building[0][0].enterRoom(player1);
-		Scanner in = new Scanner(System.in);
 		while(gameOn)
 		{
 			System.out.println("Where would you like to move? (Choose N, S, E, W)");
