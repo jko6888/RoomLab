@@ -2,21 +2,22 @@ package Game;
 
 import People.Person;
 import Rooms.Room;
-import Rooms.KevinsRoom;
-import Rooms.TrapRoom;
 import Rooms.WinningRoom;
+
+import java.util.Arrays;
+
 
 public class Board {
     static int row;
     static int col;
-    public static String[][] mapCreate;
+    public static String[][] mapForm;
+    public static String[][] mapBorder;
 
 
     public Board(int row, int col)
     {
         this.row = row;
         this.col = col;
-        this.mapCreate = mapCreate;
     }
 
     public static Room[][] generate()
@@ -33,19 +34,44 @@ public class Board {
 
         int x = (int)(Math.random()*building.length);
         int y = (int)(Math.random()*building.length);
-        Room[][] sizeRoom = new Room[10][10];
+        building[8][8] = new WinningRoom(x,y);
 
-        return sizeRoom;
+        return building;
     }
     public static void createTemplate()
     {
-        mapCreate = new String[row][col];
-        for (int i = 0; i < mapCreate.length; i++)
+        mapForm = new String[row][col];
+        mapBorder = new String[row][col];
+        for (int i = 0; i < mapForm.length; i++)
         {
-            for (int j = 0; j < mapCreate[i].length; j++)
+            for (int j = 0; j < mapForm[i].length; j++)
             {
-                mapCreate[i][j] = "?";
+                mapForm[i][j] = "?";
             }
+        }
+        /*
+        Creates the walls
+         */
+        int amountOfWalls = (int)((3 + Math.random()) * 5);
+        for (int i = 0; i < mapBorder.length; i++)
+        {
+            for (int j = 0; j < mapBorder[i].length; j++)
+            {
+                mapBorder[i][j] = "U";
+            }
+        }
+        for(int n = 0;n<=amountOfWalls;n++)
+        {
+            int randomMapWallsX = (int) (Math.random() * 10);
+            int randomMapWallsY = (int) (Math.random() * 10);
+            while(randomMapWallsX == 0 && randomMapWallsY == 0 || (randomMapWallsY == 9 && randomMapWallsX == 8) || (randomMapWallsY == 8 && randomMapWallsX == 9))
+            {
+                randomMapWallsX = (int) (Math.random() * 10);
+                randomMapWallsY = (int) (Math.random() * 10);
+            }
+            mapBorder[randomMapWallsY][randomMapWallsX] = mapForm[randomMapWallsY][randomMapWallsX];
+            mapBorder[randomMapWallsY][randomMapWallsX] = "|";
+            mapForm[randomMapWallsY][randomMapWallsX] = "?";
         }
 
     }
