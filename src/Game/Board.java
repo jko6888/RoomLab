@@ -34,7 +34,7 @@ public class Board {
 
         int x = (int)(Math.random()*building.length);
         int y = (int)(Math.random()*building.length);
-        building[8][8] = new WinningRoom(x,y);
+        building[9][9] = new WinningRoom(x,y);
 
         return building;
     }

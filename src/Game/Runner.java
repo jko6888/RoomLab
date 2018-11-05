@@ -1,5 +1,6 @@
 package Game;
 
+
 import People.Person;
 import Rooms.Room;
 import Rooms.KevinsRoom;
@@ -7,6 +8,8 @@ import Rooms.TrapRoom;
 import Rooms.JackiesRoom;
 import Rooms.AzarulsRoom;
 import Rooms.EdmundsRoom;
+import Rooms.ZombieRoom;
+
 
 import java.util.Scanner;
 
@@ -17,10 +20,11 @@ public class Runner {
 	public static void main(String[] args)
 	{
 
-		System.out.println("Background info:\nYou were kidnapped by a bunch of thieves and you have no recollection of how it happened. They left you in a mansion!!!\n");
-		System.out.println("I'll be here to help and guide you. Dw bout who I am");
+		System.out.println("Background info:You are stuck in the a house and the only way out is to find the key. Watch out for traps and Kevin.\n");
+		System.out.println("Move west(a), east(d), north(w), south(s) to progress\n");
+
 		Scanner in = new Scanner(System.in);
-		Board layout = new Board(15,15);
+		Board layout = new Board(10,10);
 		Room[][] building = layout.generate();
 		layout.createTemplate();
 
@@ -40,13 +44,16 @@ public class Runner {
 		int x4 = (int)(Math.random()*building.length);
 		int y4 = (int)(Math.random()*building.length);
 		building[x4][y4] = new EdmundsRoom(x4, y4);
+		int x5 = (int)(Math.random()*building.length);
+		int y5 = (int)(Math.random()*building.length);
+		building[x5][y5] = new ZombieRoom(x5, y5);
 		//Setup player 1 and the input scanner
-		System.out.println("First thing is first, What's your name?");
+		System.out.println("So what's your first name?");
 		String firstName = in.nextLine();
 		System.out.println("Last name?");
 		String lastName = in.nextLine();
 		Person player1 = new Person(firstName, lastName, 0,0);
-		System.out.println("Well, good luck, " + firstName + " " + lastName + ". If you have need help, type help");
+		System.out.println("Well, good luck, " + firstName + " " + lastName);
 		building[0][0].enterRoom(player1);
 		while(gameOn)
 		{
@@ -54,7 +61,7 @@ public class Runner {
 			String move = in.nextLine();
 			if(validMove(move, player1, building))
 			{
-				System.out.println("---------------------------------------");
+				System.out.println("Invalid Move");
 			}
 			if(move.toLowerCase().equals("w") || move.toLowerCase().equals("a") || move.toLowerCase().equals("s") || move.toLowerCase().equals("d"))
 			{
@@ -80,20 +87,11 @@ public class Runner {
 				System.out.println(mapPopulate);
 
 			}
-			if(move.toLowerCase().equals("help"))
-			{
-				help();
-			}
 
 
 
 		}
 		in.close();
-	}
-	public static void help()
-	{
-		System.out.println("To move: type w,a,s,d");
-		System.out.println("SYMBOLS\n--------\nYour position: \"!\"\nUnexplored areas: \"?\"\nWalls: \"|\"");
 	}
 
 
@@ -113,7 +111,7 @@ public class Runner {
 				{
 					if (Board.mapBorder[p.getxLoc() - 1][p.getyLoc()].equals("|"))
 					{
-						System.out.println("How did you run into a wall?");
+						System.out.println("Stop hitting yourself?");
 						map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
 						map[p.getxLoc()][p.getyLoc()].enterRoom(p);
 						Board.mapForm[p.getxLoc() - 1][p.getyLoc()] = "|";
@@ -140,7 +138,7 @@ public class Runner {
 				{
 					if(Board.mapBorder[p.getxLoc()][p.getyLoc() - 1].equals("|"))
 					{
-						System.out.println("How did you run into a wall?");
+						System.out.println("Bam! You hit the wall?");
 						map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
 						map[p.getxLoc()][p.getyLoc()].enterRoom(p);
 						Board.mapBorder[p.getxLoc()][p.getyLoc() - 1] = "|";
@@ -194,7 +192,7 @@ public class Runner {
 				{
 					if(Board.mapBorder[p.getxLoc()][p.getyLoc() + 1].equals("|"))
 					{
-						System.out.println("How did you run into a wall?");
+						System.out.println("Are you even looking at where you're going?");
 						map[p.getxLoc()][p.getyLoc()].leaveRoom(p);
 						map[p.getxLoc()][p.getyLoc()].enterRoom(p);
 						Board.mapForm[p.getxLoc()][p.getyLoc() + 1] = "|";

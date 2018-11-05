@@ -12,13 +12,14 @@ public class Room {
 		yLoc = y;
 	}
 
+
 	/**
 	 * Method controls the results when a person enters this room.
 	 * @param x the Person entering
 	 */
 	public void enterRoom(Person x)
 	{
-		System.out.println("You enter a plain old room");
+		System.out.println("You entered the next room");
 		occupant = x;
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);

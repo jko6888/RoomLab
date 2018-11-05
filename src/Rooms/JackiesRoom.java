@@ -2,6 +2,7 @@ package Rooms;
 
 import Game.Runner;
 import People.Person;
+import Game.Board;
 
 public class JackiesRoom extends Room
 {

@@ -1,36 +1,29 @@
 package Rooms;
 
+import Game.Runner;
 import People.Person;
+import Game.Board;
 
-public class ZombieRoom {
-    Person occupant;
-    int xLoc,yLoc;
+public class ZombieRoom extends Room
+{
 
-    public ZombieRoom(int x, int y)
-    {
-        xLoc = x;
-        yLoc = y;
+    public ZombieRoom(int x, int y) {
+        super(x, y);
+
     }
 
     /**
-     * Method controls the results when a person enters this room.
+     * Triggers the game ending conditions.
      * @param x the Person entering
      */
-    public void enterRoom(Person x)
-    {
-        System.out.println("You stumbled upon a zombie! Lose 10 health!");
+    @Override
+    public void enterRoom(Person x) {
+
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
+        System.out.println("You caught is enraged as he loses in Nitrotype! He punches you. Lose 10 Health.");
     }
 
-    /**
-     * Removes the player from the room.
-     * @param x
-     */
-    public void leaveRoom(Person x)
-    {
-        occupant = null;
-    }
 
 }

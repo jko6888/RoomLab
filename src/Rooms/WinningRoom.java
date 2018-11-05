@@ -3,36 +3,28 @@ package Rooms;
 import Game.Runner;
 import People.Person;
 
-public class WinningRoom {
-    Person occupant;
-    int xLoc,yLoc;
 
-    public WinningRoom(int x, int y)
-    {
-        xLoc = x;
-        yLoc = y;
+public class WinningRoom extends Room
+{
+
+    public WinningRoom(int x, int y) {
+        super(x, y);
+
     }
 
     /**
-     * Method controls the results when a person enters this room.
+     * Triggers the game ending conditions.
      * @param x the Person entering
      */
-    public void enterRoom(Person x)
-    {
-        System.out.println("You found the antidote! Now get out!");
+    @Override
+    public void enterRoom(Person x) {
+
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
+        System.out.println("You found the key! Now get out!");
         Runner.gameOff();
     }
 
-    /**
-     * Removes the player from the room.
-     * @param x
-     */
-    public void leaveRoom(Person x)
-    {
-        occupant = null;
-    }
 
 }
