@@ -9,7 +9,7 @@ import Rooms.JackiesRoom;
 import Rooms.AzarulsRoom;
 import Rooms.EdmundsRoom;
 import Rooms.ZombieRoom;
-
+import Rooms.WinningRoom;
 
 import java.util.Scanner;
 
@@ -47,6 +47,9 @@ public class Runner {
 		int x5 = (int)(Math.random()*building.length);
 		int y5 = (int)(Math.random()*building.length);
 		building[x5][y5] = new ZombieRoom(x5, y5);
+		int x6 = (int)(Math.random()*building.length);
+		int y6 = (int)(Math.random()*building.length);
+		building[x6][y6] = new WinningRoom(x6, y6);
 		//Setup player 1 and the input scanner
 		System.out.println("So what's your first name?");
 		String firstName = in.nextLine();
@@ -60,12 +63,12 @@ public class Runner {
 
 			String move = in.nextLine();
 			if(validMove(move, player1, building))
-			{
-				System.out.println("Invalid Move");
-			}
+		{
+			System.out.println("");
+		}
 			if(move.toLowerCase().equals("w") || move.toLowerCase().equals("a") || move.toLowerCase().equals("s") || move.toLowerCase().equals("d"))
 			{
-				String[][] Player1Location = new String[][]{};
+				String[][] whereIam = new String[][]{};
 				String mapPopulate = "";
 				for (int i = 0; i < building.length; i++)
 				{
