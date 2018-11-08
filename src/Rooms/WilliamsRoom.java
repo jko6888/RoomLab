@@ -22,6 +22,15 @@ public class WilliamsRoom extends Room
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
         System.out.println("You see William! You kill yourself!");
+        System.out.println("     ----.\n" +
+                "    \"   _}\n" +
+                "    \"@   >\n" +
+                "    |\\   7\n" +
+                "    / `-- _         ,-------,****\n" +
+                " ~    >o<  \\---------o{___}-\n" +
+                "/  |  \\  /  ________/8'\n" +
+                "|  |       /         \"\n" +
+                "|  /      |");
         Runner.gameOff();
     }
 

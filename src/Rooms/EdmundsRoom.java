@@ -23,6 +23,20 @@ public class EdmundsRoom extends Room
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
         System.out.println("Edmund is too good at coding! You faint from his greatness!");
+        System.out.println(" | _______________ |\n" +
+                        " | |XXXXXXXXXXXXX| |\n" +
+                        " | |XXXXXXXXXXXXX| |\n" +
+                        " | |XXXXXXXXXXXXX| |\n" +
+                        " | |XXXXXXXXXXXXX| |\n" +
+                        " | |XXXXXXXXXXXXX| |\n" +
+                        " |_________________|\n" +
+                        "     _[_______]_\n" +
+                        " ___[___________]___\n" +
+                        "|         [_____] []|__\n" +
+                        "|         [_____] []|  \\__\n" +
+                        "L___________________J     \\ \\___\\/\n" +
+                        " ___________________      /\\\n" +
+                        "/###################\\    (__)");
         Runner.gameOff();
     }
 

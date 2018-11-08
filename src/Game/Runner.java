@@ -15,6 +15,10 @@ import Rooms.EddiesRoom;
 import Rooms.SafeRoom;
 import Rooms.JamesRoom;
 import Rooms.SafeRoom1;
+import Rooms.SafeRoom2;
+import Rooms.SafeRoom3;
+import Rooms.MonkeyRoom;
+import Rooms.JackBoxRoom;
 
 import java.util.Scanner;
 
@@ -38,42 +42,67 @@ public class Runner {
 		int x = (int)(Math.random()*building.length);
 		int y = (int)(Math.random()*building.length);
 		building[x][y] = new TrapRoom(x, y);
+
 		int x1 = (int)(Math.random()*building.length);
 		int y1 = (int)(Math.random()*building.length);
 		building[x1][y1] = new KevinsRoom(x1, y1);
+
 		int x2 = (int)(Math.random()*building.length);
 		int y2 = (int)(Math.random()*building.length);
 		building[x2][y2] = new JackiesRoom(x2, y2);
+
 		int x3 = (int)(Math.random()*building.length);
 		int y3 = (int)(Math.random()*building.length);
 		building[x3][y3] = new AzarulsRoom(x3, y3);
+
 		int x4 = (int)(Math.random()*building.length);
 		int y4 = (int)(Math.random()*building.length);
 		building[x4][y4] = new EdmundsRoom(x4, y4);
+
 		int x5 = (int)(Math.random()*building.length);
 		int y5 = (int)(Math.random()*building.length);
 		building[x5][y5] = new ZombieRoom(x5, y5);
+
 		int x6 = (int)(Math.random()*building.length);
 		int y6 = (int)(Math.random()*building.length);
 		building[x6][y6] = new WinningRoom(x6, y6);
+
 		int x7 = (int)(Math.random()*building.length);
 		int y7 = (int)(Math.random()*building.length);
 		building[x7][y7] = new WilliamsRoom(x7, y7);
+
 		int x8 = (int)(Math.random()*building.length);
 		int y8 = (int)(Math.random()*building.length);
 		building[x8][y8] = new EddiesRoom(x8, y8);
+
 		int x9 = (int)(Math.random()*building.length);
 		int y9 = (int)(Math.random()*building.length);
 		building[x9][y9] = new SafeRoom(x9, y9);
+
 		int x10 = (int)(Math.random()*building.length);
 		int y10 = (int)(Math.random()*building.length);
 		building[x10][y10] = new JamesRoom(x10, y10);
+
 		int x11 = (int)(Math.random()*building.length);
 		int y11 = (int)(Math.random()*building.length);
 		building[x11][y11] = new SafeRoom1(x11, y11);
+
 		int x12 = (int)(Math.random()*building.length);
 		int y12 = (int)(Math.random()*building.length);
-		building[x12][y12] = new SafeRoom1(x11, y11);
+		building[x12][y12] = new SafeRoom2(x12, y12);
+
+		int x13 = (int)(Math.random()*building.length);
+		int y13 = (int)(Math.random()*building.length);
+		building[x13][y13] = new SafeRoom3(x13, y13);
+
+		int x14 = (int)(Math.random()*building.length);
+		int y14 = (int)(Math.random()*building.length);
+		building[x14][y14] = new MonkeyRoom(x14, y14);
+
+		int x15 = (int)(Math.random()*building.length);
+		int y15 = (int)(Math.random()*building.length);
+		building[x15][y15] = new JackBoxRoom(x15, y15);
+
 		//Setup player 1 and the input scanner
 		System.out.println("What's your first name?");
 		String firstName = in.nextLine();

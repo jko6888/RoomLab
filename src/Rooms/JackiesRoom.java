@@ -23,6 +23,12 @@ public class JackiesRoom extends Room
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
         System.out.println("Jackie is enraged at his typing speed, so he throws a keyboard at you! Your head smashes open!");
+        System.out.println("   .----.\n" +
+                "   |C>_ |\n" +
+                " __|____|__\n" +
+                "|  ______--|\n" +
+                "`-/.::::.\\-'a\n" +
+                " `--------'");
         Runner.gameOff();
     }
 

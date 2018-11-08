@@ -23,6 +23,12 @@ public class WinningRoom extends Room
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
         System.out.println("You found the key! You Win!");
+        System.out.println("  ooo,    .---.\n" +
+                " o`  o   /    |\\________________\n" +
+                "o`   'oooo()  | ________   _   _)\n" +
+                "`oo   o` \\    |/        | | | |\n" +
+                "  `ooo'   `---'         \"-\" |_|\n" +
+                "                                ");
         Runner.gameOff();
     }
 

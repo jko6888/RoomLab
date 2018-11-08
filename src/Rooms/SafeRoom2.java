@@ -22,7 +22,13 @@ public class SafeRoom2 extends Room
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
-        System.out.println("This room is safe! Your safe to continue!");
+        System.out.println("There is cake in this room! You're safe to continue!");
+        System.out.println("      $$  $$  $$\n" +
+                "    __||__||__||__\n" +
+                "   | * * * * * * *|\n" +
+                "   |* * * * * * * |\n" +
+                "MT | * * * * * * *|\n" +
+                "   |______________|");
     }
 
 

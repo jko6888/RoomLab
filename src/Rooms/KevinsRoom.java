@@ -23,6 +23,15 @@ public class KevinsRoom extends Room
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
         System.out.println("Kevin's Devil Horns appear! Your eyes disintegrate!");
+        System.out.println(" .-._                                                   _,-,\n" +
+                "  `._`-._                                           _,-'_,'\n" +
+                "     `._ `-._                                   _,-' _,'\n" +
+                "        `._  `-._        __.-----.__        _,-'  _,'\n" +
+                "           `._   `#===\"\"\"           \"\"\"===#'   _,'\n" +
+                "              `._/)  ._               _.  (\\_,'\n" +
+                "               )*'     **.__     __.**     '*( \n" +
+                "               #  .==..__  \"\"   \"\"  __..==,  # \n" +
+                "Deelkar        #   `\"._(_).       .(_)_.\"'   #");
         Runner.gameOff();
     }
 
