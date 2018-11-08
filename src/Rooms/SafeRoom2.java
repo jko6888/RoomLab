@@ -4,10 +4,10 @@ import Game.Runner;
 import People.Person;
 import Game.Board;
 
-public class KevinsRoom extends Room
+public class SafeRoom2 extends Room
 {
 
-    public KevinsRoom(int x, int y) {
+    public SafeRoom2(int x, int y) {
         super(x, y);
 
     }
@@ -22,8 +22,7 @@ public class KevinsRoom extends Room
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
-        System.out.println("Kevin's Devil Horns appear! Your eyes disintegrate!");
-        Runner.gameOff();
+        System.out.println("This room is safe! Your safe to continue!");
     }
 
 

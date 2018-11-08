@@ -4,10 +4,10 @@ import Game.Runner;
 import People.Person;
 import Game.Board;
 
-public class KevinsRoom extends Room
+public class JamesRoom extends Room
 {
 
-    public KevinsRoom(int x, int y) {
+    public JamesRoom(int x, int y) {
         super(x, y);
 
     }
@@ -22,7 +22,7 @@ public class KevinsRoom extends Room
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
-        System.out.println("Kevin's Devil Horns appear! Your eyes disintegrate!");
+        System.out.println("You see James's grades and stab your eyes out!");
         Runner.gameOff();
     }
 

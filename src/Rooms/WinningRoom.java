@@ -22,7 +22,7 @@ public class WinningRoom extends Room
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
-        System.out.println("You found the key! Now get out!");
+        System.out.println("You found the key! You Win!");
         Runner.gameOff();
     }
 

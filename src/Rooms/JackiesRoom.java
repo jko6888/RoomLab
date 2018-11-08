@@ -22,7 +22,8 @@ public class JackiesRoom extends Room
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
-        System.out.println("Jackie is enraged as he loses in Nitrotype! He punches you as you enter. Lose 10 Health.");
+        System.out.println("Jackie is enraged at his typing speed, so he throws a keyboard at you! Your head smashes open!");
+        Runner.gameOff();
     }
 
 

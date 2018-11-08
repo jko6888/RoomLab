@@ -22,7 +22,8 @@ public class EdmundsRoom extends Room
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
-        System.out.println("Edmund farted in the room! You lose 20 health");
+        System.out.println("Edmund is too good at coding! You faint from his greatness!");
+        Runner.gameOff();
     }
 
 

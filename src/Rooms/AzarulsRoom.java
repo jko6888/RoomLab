@@ -22,7 +22,8 @@ public class AzarulsRoom extends Room
         occupant = x;
         x.setxLoc(this.xLoc);
         x.setyLoc(this.yLoc);
-        System.out.println("You caught is enraged as he loses in Nitrotype! He punches you. Lose 10 Health.");
+        System.out.println("Azarul flicks his booger on you! You Die!");
+        Runner.gameOff();
     }
 
 

@@ -22,7 +22,8 @@ public class TrapRoom extends Room
 		occupant = x;
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
-		System.out.println("You stepped on a trap. Lose 10 Health.");
+		System.out.println("You stepped on a trap. You lose!");
+		Runner.gameOff();
 	}
 
 
