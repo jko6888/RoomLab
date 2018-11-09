@@ -19,6 +19,9 @@ import Rooms.SafeRoom2;
 import Rooms.SafeRoom3;
 import Rooms.MonkeyRoom;
 import Rooms.JackBoxRoom;
+import Rooms.SafeRoom4;
+import Rooms.SafeRoom5;
+import Rooms.AlienRoom;
 
 import java.util.Scanner;
 
@@ -102,6 +105,18 @@ public class Runner {
 		int x15 = (int)(Math.random()*building.length);
 		int y15 = (int)(Math.random()*building.length);
 		building[x15][y15] = new JackBoxRoom(x15, y15);
+
+		int x16 = (int)(Math.random()*building.length);
+		int y16 = (int)(Math.random()*building.length);
+		building[x16][y16] = new SafeRoom4(x16, y16);
+
+		int x17 = (int)(Math.random()*building.length);
+		int y17 = (int)(Math.random()*building.length);
+		building[x17][y17] = new SafeRoom5(x17, y17);
+
+		int x18 = (int)(Math.random()*building.length);
+		int y18 = (int)(Math.random()*building.length);
+		building[x18][y18] = new AlienRoom(x18, y18);
 
 		//Setup player 1 and the input scanner
 		System.out.println("What's your first name?");

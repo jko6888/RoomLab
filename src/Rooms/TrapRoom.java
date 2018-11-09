@@ -23,8 +23,9 @@ public class TrapRoom extends Room
 		x.setxLoc(this.xLoc);
 		x.setyLoc(this.yLoc);
 		System.out.println("You activated my trap card. You lose!");
-		System.out.println("|           )._______.-'\n" +
-						"`----------'  BP");
+		System.out.println(" ___________ ____________  \n" +
+				"|           )._______.-'\n" +
+				"`----------'  BP");
 		Runner.gameOff();
 	}
 

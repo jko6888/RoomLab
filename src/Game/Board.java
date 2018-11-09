@@ -2,8 +2,7 @@ package Game;
 
 import Rooms.Room;
 import Rooms.WinningRoom;
-import Game.Runner;
-import People.Person;
+
 
 public class Board {
     static int hori;
